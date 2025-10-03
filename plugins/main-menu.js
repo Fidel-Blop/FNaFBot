@@ -6,432 +6,544 @@ let userId = mentionedJid && mentionedJid[0] ? mentionedJid[0] : m.sender
 let totalreg = Object.keys(global.db.data.users).length
 let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
     
-let txt = `̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
+let txt = `̮̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮   ̮
 ︶•︶°︶•︶°︶•︶°︶•︶°︶•︶°︶
-> ❀ Hola! @${userId.split('@')[0]}, Soy *${botname}*, Aquí tienes la lista de comandos.
+> 🎥👁️ ¡Hola, guardia nocturno! @${userId.split('@')[0]}  
+Soy *${botname}* y desde la *Cámara de Seguridad* te entrego el **panel de comandos**.  
+Mantén la calma, los animatrónicos pueden estar escuchando...
 
 ╭┈ࠢ͜┅ࠦ͜͜╾݊͜─ؕ͜─ׄ͜─֬͜─֟͜─֫͜─ׄ͜─ؕ͜─݊͜┈ࠦ͜┅ࠡ͜͜┈࠭͜͜۰۰͜۰
-│✦ *Tipo* » ${(conn.user.jid == global.conn.user.jid ? 'Principal' : 'Sub-Bot')}
-│✰ *Usuarios* » ${totalreg.toLocaleString()}
-│⚘ *Versión* » ${vs}
-│ꕥ *Plugins* » ${totalCommands}
-│🜸 *Librería* » ${libreria}
+│🔦 *Tipo de Unidad* » ${(conn.user.jid == global.conn.user.jid ? 'Central Principal' : 'Sub-Sistema')}
+│👤 *Usuarios Registrados* » ${totalreg.toLocaleString()}
+│⚙️ *Versión del Sistema* » ${vs}
+│📂 *Módulos Activos* » ${totalCommands}
+│🖥️ *Librería Base* » ${libreria}
 ╰ׅ┈ࠢ͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴ ⋱࣭ ᩴ  ⋮֔   ᩴ ⋰╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜┈ࠢ͜╯ׅ
 
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *ECONOMY* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-> ✿ Comandos de *Economía* para ganar dinero.
-✦ *#w • #work • #trabajar*
-> ⸙ Ganar coins trabajando.
-✦ *#slut • #protituirse*
-> ⸙ Ganar coins prostituyéndote.
-✦ *#coinflip • #flip • #cf* + [cantidad] <cara/cruz>
-> ⸙ Apostar coins en un cara o cruz.
-✦ *#crime • #crimen*
-> ⸙ Ganar coins rapido.
-✦ *#roulette • #rt* + [red/black] [cantidad]
-> ⸙ Apostar coins en una ruleta.
-✦ *#casino • #apostar* • *#slot* + [cantidad]
-> ⸙ Apuestar coins en el casino.
-✦ *#balance • #bal • #bank* + <usuario>
-> ⸙ Ver cuantos coins tienes en el banco.
-✦ *#deposit • #dep • #depositar • #d* + [cantidad] | all
-> ⸙ Depositar tus coins en el banco.
-✦ *#withdraw • #with • #retirar* + [cantidad] | all
-> ⸙ Retirar tus coins del banco.
-✦ *#economyinfo • #einfo*
-> ⸙ Ver tu información de economía en el grupo.
-✦ *#givecoins • #pay • #coinsgive* + [usuario] [cantidad]
-> ⸙ Dar coins a un usuario.
-✦ *#miming • #minar • #mine*
-> ⸙ Realizar trabajos de minería y ganar coins.
-✦ *#daily • #diario*
-> ⸙ Reclamar tu recompensa diaria.
-✦ *#cofre* • *#coffer*
-> ⸙ Reclamar tu cofre diario.
-✦ *#weekly • #semanal*
-> ⸙ Reclamar tu recompensa semanal.
-✦ *#monthly • #mensual*
-> ⸙ Reclamar tu recompensa mensual.
-✦ *#steal • #robar • #rob* + [@mencion]
-> ⸙ Intentar robar coins a un usuario.
-✦ *#economyboard • #eboard • #baltop* + <pagina>
-> ⸙ Ver tu información de economía en el grupo.
-✦ *#aventura • #adventure*
-> ⸙ Aventuras para ganar coins y exp.
-✦ *#curar • #heal*
-> ⸙ Curar salud para salir de aventuras.
-✦ *#cazar • #hunt*
-> ⸙ cazar animales para ganar coins y exp.
-✦ *#fish • #pescar*
-> ⸙ Ganar coins y exp pescando.
-✦ *#mazmorra • #dungeon*
-> ⸙ Explorar mazmorras para ganar coins y exp.
+╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴🪙 *ECONOMÍA FNaF* 🪙╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
+> ✿ Comandos para ganar *tokens de la pizzería*.  
+Úsalos con cuidado... no querrás llamar demasiado la atención de Rockstar Freddy.
+
+✦ *#w • #work • #trabajar*  
+> ⸙ Gana fichas limpiando la pizzería o revisando cámaras.  
+
+✦ *#slut • #prostituirse*  
+> ⸙ Opción cuestionable... incluso Foxy te juzgará por esto.  
+
+✦ *#coinflip • #flip • #cf* + [cantidad] <cara/cruz>  
+> ⸙ Apuesta fichas lanzando una ficha de arcade.  
+
+✦ *#crime • #crimen*  
+> ⸙ Intenta robar en la máquina de tickets... cuidado con la Marioneta.  
+
+✦ *#roulette • #rt* + [red/black] [cantidad]  
+> ⸙ Apuesta fichas en la ruleta de premios.  
+
+✦ *#casino • #apostar • #slot* + [cantidad]  
+> ⸙ Prueba suerte en la tragaperras de la pizzería.  
+
+✦ *#balance • #bal • #bank* + <usuario>  
+> ⸙ Ver cuántas fichas guardaste en la caja fuerte del guardia.  
+
+✦ *#deposit • #dep • #depositar • #d* + [cantidad] | all  
+> ⸙ Deposita fichas en la bóveda de seguridad.  
+
+✦ *#withdraw • #with • #retirar* + [cantidad] | all  
+> ⸙ Retira fichas... con riesgo de que alguien te vea.  
+
+✦ *#economyinfo • #einfo*  
+> ⸙ Estado de tu economía nocturna.  
+
+✦ *#givecoins • #pay • #coinsgive* + [usuario] [cantidad]  
+> ⸙ Entrega fichas a otro guardia (o animatrónico, si te atreves).  
+
+✦ *#miming • #minar • #mine*  
+> ⸙ Minar fichas entre los restos del backstage.  
+
+✦ *#daily • #diario*  
+> ⸙ Reclama tu paga diaria por sobrevivir un turno.  
+
+✦ *#cofre • #coffer*  
+> ⸙ Abre un cofre olvidado en la oficina.  
+
+✦ *#weekly • #semanal*  
+> ⸙ Bono semanal por no renunciar al trabajo.  
+
+✦ *#monthly • #mensual*  
+> ⸙ Bono mensual — si llegas vivo.  
+
+✦ *#steal • #robar • #rob* + [@mencion]  
+> ⸙ Intenta robar fichas a otro empleado (arriesgado).  
+
+✦ *#economyboard • #eboard • #baltop* + <pagina>  
+> ⸙ Ranking de economía en la pizzería.  
+
+✦ *#aventura • #adventure*  
+> ⸙ Explora la pizzería en busca de tokens y exp.  
+
+✦ *#curar • #heal*  
+> ⸙ Restaura tu salud en la sala médica.  
+
+✦ *#cazar • #hunt*  
+> ⸙ Caza animatrónicos descompuestos para fichas.  
+
+✦ *#fish • #pescar*  
+> ⸙ Pesca en los estanques de utilería del local.  
+
+✦ *#mazmorra • #dungeon*  
+> ⸙ Explora zonas oscuras y bloqueadas de la pizzería.  
+
+╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
+╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴📥 *DOWNLOAD SYSTEM* 📥╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
+> ✿ Módulos de *Descarga de Archivos* desde distintas fuentes externas.  
+⚠️ Ten cuidado... algunos enlaces podrían estar “malditos” en el sistema.
+
+✦ *#tiktok • #tt* + [Link] / [búsqueda]  
+> ⸙ Descarga grabaciones virales desde la red… incluso aquellas que nunca debieron compartirse.  
+
+✦ *#mediafire • #mf* + [Link]  
+> ⸙ Recupera archivos olvidados en MediaFire… ¿seguro que quieres abrirlos?  
+
+✦ *#mega • #mg* + [Link]  
+> ⸙ Extrae datos encriptados desde MEGA. A veces contienen cosas… extrañas.  
+
+✦ *#play • #play2 • #ytmp3 • #ytmp4* + [Canción] / [Link]  
+> ⸙ Descarga música o videos desde YouTube. Perfecto para ambientar tu turno nocturno.  
+
+✦ *#facebook • #fb* + [Link]  
+> ⸙ Obtén grabaciones de Facebook. Algunas parecen cámaras de seguridad viejas…  
+
+✦ *#twitter • #x* + [Link]  
+> ⸙ Descarga transmisiones extrañas desde Twitter/X.  
+
+✦ *#ig • #instagram* + [Link]  
+> ⸙ Recupera reels de Instagram… aunque la Marioneta dice que no los abras a medianoche.  
+
+✦ *#pinterest • #pin* + [búsqueda] / [Link]  
+> ⸙ Encuentra imágenes en Pinterest. Algunas podrían mostrar a los animatrónicos fuera de lugar.  
+
+✦ *#image • #imagen* + [búsqueda]  
+> ⸙ Busca imágenes en Google. Úsalas como referencia de las cámaras de la pizzería.  
+
+✦ *#apk • #modapk* + [búsqueda]  
+> ⸙ Descarga aplicaciones ocultas desde Aptoide. ¿Un minijuego de Freddy tal vez?  
+
+✦ *#ytsearch • #search* + [búsqueda]  
+> ⸙ Rastrear videos en YouTube. A veces aparecen grabaciones “no listadas” de la pizzería.  
+
 ╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
 
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *DOWNLOAD* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-> ✿ Comandos de *Descargas* para descargar archivos de varias fuentes.
-✦ *#tiktok • #tt* + [Link] / [busqueda]
-> ⸙ Descargar un video de TikTok.
-✦ *#mediafire • #mf* + [Link]
-> ⸙ Descargar un archivo de MediaFire.
-✦ *#mega • #mg* + [Link]
-> ⸙ Descargar un archivo de MEGA.
-✦ *#play • #play2 • #ytmp3 • #ytmp4* + [Cancion] / [Link]
-> ⸙ Descargar una cancion o vídeo de YouTube.
-✦ *#facebook • #fb* + [Link]
-> ⸙ Descargar un video de Facebook.
-✦ *#twitter • #x* + [Link]
-> ⸙ Descargar un video de Twitter/X.
-✦ *#ig • #instagram* + [Link]
-> ⸙ Descargar un reel de Instagram.
-✦ *#pinterest • #pin* + [busqueda] / [Link]
-> ⸙ Buscar y descargar imagenes de Pinterest.
-✦ *#image • #imagen* + [busqueda]
-> ⸙ Buscar y descargar imagenes de Google.
-✦ *#apk • #modapk* + [busqueda]
-> ⸙ Descargar un apk de Aptoide.
-✦ *#ytsearch • #search* + [busqueda]
-> ⸙ Buscar videos de YouTube.
+╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴🔌 *SOCKETS SYSTEM* 🔌╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
+> ✿ Módulo para registrar y controlar tu propio Bot.  
+☠️ Advertencia: manipular los *sockets* puede despertar procesos… dormidos.
+
+✦ *#qr • #code*  
+> ⸙ Genera un Sub-Bot mediante código QR/Code. Como activar un animatrónico desde consola.  
+
+✦ *#bots • #botlist*  
+> ⸙ Ver cuántos bots (o “unidades activas”) siguen funcionando dentro del sistema.  
+
+✦ *#status • #estado*  
+> ⸙ Comprobar el estado actual del bot.  
+📡 Como chequear las cámaras… ¿el sistema sigue vivo?  
+
+✦ *#p • #ping*  
+> ⸙ Mide el tiempo de respuesta. Cada milisegundo cuenta… cuando los pasillos están oscuros.  
+
+✦ *#join* + [Invitación]  
+> ⸙ Conectar al bot a un nuevo grupo. Como mover un animatrónico a otra sala.  
+
+✦ *#leave • #salir*  
+> ⸙ Forzar al bot a retirarse de un grupo.  
+🚪 “Unit offline”.  
+
+✦ *#logout*  
+> ⸙ Cierra la sesión del bot.  
+🛑 Precaución: podría no volver a encenderse.  
+
+✦ *#setpfp • #setimage*  
+> ⸙ Cambiar la imagen de perfil. Como darle nueva máscara a un animatrónico.  
+
+✦ *#setstatus* + [estado]  
+> ⸙ Configura el estado del bot. Mensajes en la consola del sistema.  
+
+✦ *#setusername* + [nombre]  
+> ⸙ Renombra al bot. Cuidado: algunos nombres ya están “tomados” por entidades viejas.  
+
+╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
 ╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
 
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *GACHA* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-> ✿ Comandos de *Gacha* para reclamar y colecciónar personajes.
-✦ *#buycharacter • #buychar • #buyc* + [nombre]
-> ⸙ Comprar un personaje en venta.
-✦ *#charimage • #waifuimage • #cimage • #wimage* + [nombre]
-> ⸙ Ver una imagen aleatoria de un personaje.
-✦ *#charinfo • #winfo • #waifuinfo* + [nombre]
-> ⸙ Ver información de un personaje.
-✦ *#claim • #c • #reclamar* + {citar personaje}
-> ⸙ Reclamar un personaje.
-✦ *#delclaimmsg*
-> ⸙ Restablecer el mensaje al reclamar un personaje
-✦ *#deletewaifu • #delwaifu • #delchar* + [nombre]
-> ⸙ Eliminar un personaje reclamado.
-✦ *#favoritetop • #favtop*
-> ⸙ Ver el top de personajes favoritos.
-✦ *#gachainfo • #ginfo • #infogacha*
-> ⸙ Ver tu información de gacha.
-✦ *#giveallharem* + [@usuario]
-> ⸙ Regalar todos tus personajes a otro usuario.
-✦ *#givechar • #givewaifu • #regalar* + [@usuario] [nombre]
-> ⸙ Regalar un personaje a otro usuario.
-✦ *#robwaifu • #robarwaifu* + [@usuario]
-> ⸙ Robar un personaje a otro usuario.
-✦ *#harem • #waifus • #claims* + <@usuario>
-> ⸙ Ver tus personajes reclamados.
-✦ *#haremshop • #tiendawaifus • #wshop* + <Pagina>
-> ⸙ Ver los personajes en venta.
-✦ *#removesale • #removerventa* + [precio] [nombre]
-> ⸙ Eliminar un personaje en venta.
-✦ *#rollwaifu • #rw • #roll*
-> ⸙ Waifu o husbando aleatorio
-✦ *#sell • #vender* + [precio] [nombre]
-> ⸙ Poner un personaje a la venta.
-✦ *#serieinfo • #ainfo • #animeinfo* + [nombre]
-> ⸙ Información de un anime.
-✦ *#serielist • #slist • #animelist*
-> ⸙ Listar series del bot
-✦ *#setclaimmsg • #setclaim* + [mensaje]
-> ⸙ Modificar el mensaje al reclamar un personaje
-✦ *#trade • #intercambiar* + [Tu personaje] / [Personaje 2]
-> ⸙ Intercambiar un personaje con otro usuario
-✦ *#vote • #votar* + [nombre]
-> ⸙ Votar por un personaje para subir su valor.
-✦ *#waifusboard • #waifustop • #topwaifus • #wtop* + [número]
-> ⸙ Ver el top de personajes con mayor valor.
+╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴⚙️ *UTILITIES SYSTEM* ⚙️╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
+> ✿ Módulo de *Utilidades* para el operador.  
+🖥️ Cada comando es como abrir una vieja terminal en Fazbear Entertainment…  
+
+✦ *#help • #menu*  
+> ⸙ Muestra el manual del sistema. (Aunque algunas páginas parecen… arrancadas).  
+
+✦ *#calcular • #cal*  
+> ⸙ Calcula ecuaciones. Como los viejos minijuegos de arcade escondidos.  
+
+✦ *#delmeta*  
+> ⸙ Restablece el pack y autor de tus stickers. “Default parameters restored”.  
+
+✦ *#getpic • #pfp* + [@usuario]  
+> ⸙ Accede a la imagen de perfil de un usuario. Como revisar cámaras de seguridad.  
+
+✦ *#say* + [texto]  
+> ⸙ El bot repite tu mensaje. Como una voz robótica en los parlantes del local.  
+
+✦ *#setmeta* + [autor] | [pack]  
+> ⸙ Configura el pack/autor de stickers. Nuevo “branding” aplicado.  
+
+✦ *#sticker • #s • #wm* + {citar img/video}  
+> ⸙ Convierte imagen/video en sticker.  
+📸 “Rendering asset…”  
+
+✦ *#toimg • #img* + {citar sticker}  
+> ⸙ Transforma stickers a imágenes. Como restaurar archivos dañados.  
+
+✦ *#brat • #bratv • #qc • #emojimix*  
+> ⸙ Genera stickers con texto. Mensajes ocultos en la pared.  
+
+✦ *#gitclone* + [Link]  
+> ⸙ Descarga un repositorio de GitHub.  
+🗄️ Archivos como expedientes secretos.  
+
+✦ *#enhance • #remini • #hd*  
+> ⸙ Mejora la calidad de imágenes. “ENHANCE… acercando pasillo cámara 3A…”  
+
+✦ *#letra • #style*  
+> ⸙ Cambia el estilo de las letras. Como tipografías de archivos viejos.  
+
+✦ *#read • #readviewonce*  
+> ⸙ Ver imágenes de “solo una vez”.  
+👁️ “ViewOnce bypassed”.  
+
+✦ *#ss • #ssweb*  
+> ⸙ Screenshot de páginas web. “Snapshot de sistemas externos”.  
+
+✦ *#translate • #traducir • #trad*  
+> ⸙ Traduce idiomas.  
+📖 Archivos internos no siempre están en inglés…  
+
+✦ *#ia • #gemini*  
+> ⸙ Pregunta a la IA.  
+🤖 “Assistant protocol online…”  
+
+✦ *#tourl • #catbox*  
+> ⸙ Convierte archivos en links. Transferencia remota habilitada.  
+
+✦ *#wiki • #wikipedia*  
+> ⸙ Busca en la base de datos pública.  
+📚 Aunque algunos temas parecen… alterados.  
+
+✦ *#dalle • #flux*  
+> ⸙ Genera imágenes con IA. Como recreaciones de recuerdos difusos.  
+
+✦ *#npmdl • #nmpjs*  
+> ⸙ Descarga paquetes de NPMJS.  
+📦 “Package retrieved successfully”.  
+
+✦ *#google*  
+> ⸙ Realiza búsquedas en Google.  
+🔎 Porque no todo está en los archivos internos de Fazbear…  
+
 ╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
 
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *SOCKETS* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-> ✿ Comandos para registrar tu propio Bot.
-✦ *#qr • #code*
-> ⸙ Crear un Sub-Bot con un codigo QR/Code
-✦ *#bots • #botlist*
-> ⸙ Ver el numero de bots activos.
-✦ *#status • #estado*
-> ⸙ Ver estado del bot.
-✦ *#p • #ping*
-> ⸙ Medir tiempo de respuesta.
-✦ *#join* + [Invitacion]
-> ⸙ Unir al bot a un grupo.
-✦ *#leave • #salir*
-> ⸙ Salir de un grupo.
-✦ *#logout*
-> ⸙ Cerrar sesion del bot.
-✦ *#setpfp • #setimage*
-> ⸙ Cambiar la imagen de perfil
-✦ *#setstatus* + [estado]
-> ⸙ Cambiar el estado del bot
-✦ *#setusername* + [nombre]
-> ⸙ Cambiar el nombre de usuario
+╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴🗂️ *PROFILES DATABASE* 🗂️╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
+> ✿ Comandos de *Perfil*. Cada usuario tiene su propio “expediente” en el sistema de Fazbear Entertainment.
+
+✦ *#leaderboard • #lboard • #top* + <Página>  
+> ⸙ Consulta el *ranking* de usuarios más activos. Como la lista de empleados con más turnos cumplidos.  
+
+✦ *#level • #lvl* + <@Mencion>  
+> ⸙ Ver tu nivel y experiencia. Tu “registro de servicio nocturno”.  
+
+✦ *#marry • #casarse* + <@Mencion>  
+> ⸙ Vincularte con alguien. Contratos internos, más permanentes de lo que parece…  
+
+✦ *#profile* + <@Mencion>  
+> ⸙ Accede a tu archivo personal. Fotografía, registros y observaciones.  
+
+✦ *#setbirth* + [fecha]  
+> ⸙ Establece tu fecha de nacimiento. Datos añadidos al expediente.  
+
+✦ *#setdescription • #setdesc* + [Descripción]  
+> ⸙ Personaliza tu ficha. “Notas adicionales”.  
+
+✦ *#setgenre* + Hombre | Mujer  
+> ⸙ Define tu género. Parámetro de registro biométrico.  
+
+✦ *#delgenre • #delgenero*  
+> ⸙ Elimina tu género del sistema. (Los archivos quedan incompletos).  
+
+✦ *#delbirth* + [fecha]  
+> ⸙ Elimina tu fecha de nacimiento del archivo.  
+
+✦ *#divorce*  
+> ⸙ Finaliza tu vínculo. “Contrato roto”.  
+
+✦ *#setfavourite • #setfav* + [Personaje]  
+> ⸙ Establece tu personaje favorito. Tu *animatrónico reclamado*.  
+
+✦ *#deldescription • #deldesc*  
+> ⸙ Elimina tu descripción del archivo.  
+
+✦ *#prem • #vip*  
+> ⸙ Acceso a Membresía Premium. Como un pase especial… reservado a clientes “importantes”.  
+
+╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴🔒 *GROUP CONTROL SYSTEM* 🔒╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
+> ✿ Comandos para *Administradores*.  
+📋 Piensa en esto como el **panel de seguridad del guardia nocturno**, con opciones de control y alerta.
+
+✦ *#tag • #hidetag • #invocar • #tagall* + [mensaje]  
+> ⸙ Menciona a todos los usuarios del grupo. Broadcast como altavoz del local.  
+
+✦ *#detect • #alertas* + [enable/disable]  
+> ⸙ Activa o desactiva alertas. “Promote/Demote log system”.  
+
+✦ *#antilink • #antienlace* + [enable/disable]  
+> ⸙ Sistema antienlaces. Bloqueo de accesos externos.  
+
+✦ *#bot* + [enable/disable]  
+> ⸙ Activa o desactiva al bot. Encendido/apagado de sistemas automáticos.  
+
+✦ *#close • #cerrar*  
+> ⸙ Cierra el grupo. Solo administradores con “llave maestra” pueden hablar.  
+
+✦ *#demote* + <@usuario>  
+> ⸙ Revoca privilegios de admin. Acceso restringido.  
+
+✦ *#economy* + [enable/disable]  
+> ⸙ Activa/desactiva economía. Terminal financiera local.  
+
+✦ *#gacha* + [enable/disable]  
+> ⸙ Activa/desactiva juegos. Arcade encendido/apagado.  
+
+✦ *#welcome • #bienvenida* + [enable/disable]  
+> ⸙ Mensajes de bienvenida/despedida. Como anuncios automáticos en altavoz.  
+
+✦ *#setbye* + [texto]  
+> ⸙ Configura mensaje de despedida. “Registro de salida del empleado”.  
+
+✦ *#setprimary* + [@bot]  
+> ⸙ Establece el bot principal del grupo. Control central.  
+
+✦ *#setwelcome* + [texto]  
+> ⸙ Configura mensaje de bienvenida.  
+
+✦ *#kick* + <@usuario>  
+> ⸙ Expulsa a un usuario. “Acceso denegado”.  
+
+✦ *#nsfw* + [enable/disable]  
+> ⸙ Activa o bloquea comandos NSFW. (Zona restringida).  
+
+✦ *#onlyadmin* + [enable/disable]  
+> ⸙ Solo admins pueden usar comandos. Nivel de seguridad alto.  
+
+✦ *#open • #abrir*  
+> ⸙ Reabre el grupo. Todos pueden hablar.  
+
+✦ *#promote* + <@usuario>  
+> ⸙ Asciende a administrador. Entrega de tarjeta de acceso.  
+
+✦ *#add • #añadir • #agregar* + {número}  
+> ⸙ Invita a un usuario. “Nueva credencial generada”.  
+
+✦ *admins • admin* + [texto]  
+> ⸙ Menciona a los administradores. Llamado de emergencia al staff.  
+
+✦ *#restablecer • #revoke*  
+> ⸙ Restablece el enlace del grupo. Como reiniciar las puertas de seguridad.  
+
+✦ *#addwarn • #warn* + <@usuario>  
+> ⸙ Advertir a un usuario. Registro de conducta.  
+
+✦ *#unwarn • #delwarn* + <@usuario>  
+> ⸙ Quita advertencias. Expediente limpiado.  
+
+✦ *#advlist • #listadv*  
+> ⸙ Lista de usuarios advertidos. Archivos con reportes.  
+
+✦ *#inactivos • #kickinactivos*  
+> ⸙ Detecta y elimina inactivos. “Purge protocol”.  
+
+✦ *#listnum • #kicknum* [texto]  
+> ⸙ Elimina usuarios según prefijo de país.  
+
+✦ *#gpbanner • #groupimg*  
+> ⸙ Cambia imagen del grupo. Nuevo logotipo.  
+
+✦ *#gpname • #groupname* [texto]  
+> ⸙ Cambia el nombre del grupo. Archivo renombrado.  
+
+✦ *#gpdesc • #groupdesc* [texto]  
+> ⸙ Cambia la descripción del grupo. Notas internas.  
+
+✦ *#del • #delete* + {citar mensaje}  
+> ⸙ Elimina mensajes. Evidencia borrada.  
+
+✦ *#linea • #listonline*  
+> ⸙ Lista de usuarios conectados. “Tracking online subjects”.  
+
+✦ *#gp • #infogrupo*  
+> ⸙ Muestra información del grupo. Archivo completo.  
+
+✦ *#link*  
+> ⸙ Muestra enlace de invitación. “Generated Invite Protocol”.  
+
 ╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
 
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *UTILITIES* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-> ✿ Comandos de *Útilidades*.
-✦ *#help • #menu*
-> ⸙ Ver el menú de comandos.
-✦ *#sc • #script*
-> ⸙ Link del repositorio oficial del Bot.
-✦ *#sug • #suggest*
-> ⸙ Sugerir nuevas funciones al desarrollador.
-✦ *#reporte • #reportar*
-> ⸙ Reportar fallas o problemas del bot.
-✦ *#calcular • #cal*
-> ⸙ Calcular tipos de ecuaciones.
-✦ *#delmeta*
-> ⸙ Restablecer el pack y autor por defecto para tus stickers.
-✦ *#getpic • #pfp* + [@usuario]
-> ⸙ Ver la foto de perfil de un usuario.
-✦ *#say* + [texto]
-> ⸙ Repetir un mensaje
-✦ *#setmeta* + [autor] | [pack]
-> ⸙ Establecer el pack y autor por defecto para tus stickers.
-✦ *#sticker • #s • #wm* + {citar una imagen/video}
-> ⸙ Convertir una imagen/video a sticker
-✦ *#toimg • #img* + {citar sticker}
-> ⸙ Convertir un sticker/imagen de una vista a imagen.
-✦ *#brat • #bratv • #qc • #emojimix*︎ 
-> ⸙ Crear stickers con texto.
-✦ *#gitclone* + [Link]
-> ⸙ Descargar un repositorio de Github.
-✦ *#enhance • #remini • #hd*
-> ⸙ Mejorar calidad de una imagen.
-✦ *#letra • #style* 
-> ⸙ Cambia la fuente de las letras.
-✦ *#read • #readviewonce*
-> ⸙ Ver imágenes viewonce.
-✦ *#ss • #ssweb*
-> ⸙ Ver el estado de una página web.
-✦ *#translate • #traducir • #trad*
-> ⸙ Traducir palabras en otros idiomas.
-✦ *#ia • #gemini*
-> ⸙ Preguntar a Chatgpt.
-✦ *#tourl • #catbox*
-> ⸙ Convertidor de imágen/video en urls.
-✦ *#wiki • #wikipedia*
-> ⸙ Investigar temas a través de Wikipedia.
-✦ *#dalle • #flux*
-> ⸙ Crear imágenes con texto mediante IA.
-✦ *#npmdl • #nmpjs*
-> ⸙ Descargar paquetes de NPMJS.
-✦ *#google*
-> ⸙ Realizar búsquedas por Google.
-╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
-
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *PROFILES* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-> ✿ Comandos de *Perfil* para ver y configurar tu perfil.
-✦ *#leaderboard • #lboard • #top* + <Paginá>
-> ⸙ Top de usuarios con más experiencia.
-✦ *#level • #lvl* + <@Mencion>
-> ⸙ Ver tu nivel y experiencia actual.
-✦ *#marry • #casarse* + <@Mencion>
-> ⸙ Casarte con alguien.
-✦ *#profile* + <@Mencion>
-> ⸙ Ver tu perfil.
-✦ *#setbirth* + [fecha]
-> ⸙ Establecer tu fecha de cumpleaños.
-✦ *#setdescription • #setdesc* + [Descripcion]
-> ⸙ Establecer tu descripcion.
-✦ *#setgenre* + Hombre | Mujer
-> ⸙ Establecer tu genero.
-✦ *#delgenre • #delgenero*
-> ⸙ Eliminar tu género.
-✦ *#delbirth* + [fecha]
-> ⸙ Borrar tu fecha de cumpleaños.
-✦ *#divorce*
-> ⸙ Divorciarte de tu pareja.
-✦ *#setfavourite • #setfav* + [Personaje]
-> ⸙ Establecer tu claim favorito.
-✦ *#deldescription • #deldesc*
-> ⸙ Eliminar tu descripción.
-✦ *#prem • #vip*
-> ⸙ Comprar membresía premium.
-╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ
-
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *GROUPS* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-> ✿ Comandos para *Administradores* de grupos.
-✦ *#tag • #hidetag • #invocar • #tagall* + [mensaje]
-> ⸙ Envía un mensaje mencionando a todos los usuarios del grupo.
-✦ *#detect • #alertas* + [enable/disable]
-> ⸙ Activar/desactivar las alertas de promote/demote
-✦ *#antilink • #antienlace* + [enable/disable]
-> ⸙ Activar/desactivar el antienlace
-✦ *#bot* + [enable/disable]
-> ⸙ Activar/desactivar al bot
-✦ *#close • #cerrar*
-> ⸙ Cerrar el grupo para que solo los administradores puedan enviar mensajes.
-✦ *#demote* + <@usuario> | {mencion}
-> ⸙ Descender a un usuario de administrador.
-✦ *#economy* + [enable/disable]
-> ⸙ Activar/desactivar los comandos de economía
-✦ *#gacha* + [enable/disable]
-> ⸙ Activar/desactivar los comandos de Gacha y Games.
-✦ *#welcome • #bienvenida* + [enable/disable]
-> ⸙ Activar/desactivar la bienvenida y despedida.
-✦ *#setbye* + [texto]
-> ⸙ Establecer un mensaje de despedida personalizado.
-✦ *#setprimary* + [@bot]
-> ⸙ Establece un bot como primario del grupo.
-✦ *#setwelcome* + [texto]
-> ⸙ Establecer un mensaje de bienvenida personalizado.
-✦ *#kick* + <@usuario> | {mencion}
-> ⸙ Expulsar a un usuario del grupo.
-✦ *#nsfw* + [enable/disable]
-> ⸙ Activar/desactivar los comandos NSFW
-✦ *#onlyadmin* + [enable/disable]
-> ⸙ Permitir que solo los administradores puedan utilizar los comandos.
-✦ *#open • #abrir*
-> ⸙ Abrir el grupo para que todos los usuarios puedan enviar mensajes.
-✦ *#promote* + <@usuario> | {mencion}
-> ⸙ Ascender a un usuario a administrador.
-✦ *#add • #añadir • #agregar* + {número}
-> ⸙ Invita a un usuario a tu grupo.
-✦ *admins • admin* + [texto]
-> ⸙ Mencionar a los admins para solicitar ayuda.
-✦ *#restablecer • #revoke*
-> ⸙ Restablecer enlace del grupo.
-✦ *#addwarn • #warn* + <@usuario> | {mencion}
-> ⸙ Advertir aún usuario.
-✦ *#unwarn • #delwarn* + <@usuario> | {mencion}
-> ⸙ Quitar advertencias de un usuario.
-✦ *#advlist • #listadv*
-> ⸙ Ver lista de usuarios advertidos.
-✦ *#inactivos • #kickinactivos*
-> ⸙ Ver y eliminar a usuarios inactivos.
-✦ *#listnum • #kicknum* [texto]
-> ⸙ Eliminar usuarios con prefijo de país.
-✦ *#gpbanner • #groupimg*
-> ⸙ Cambiar la imagen del grupo.
-✦ *#gpname • #groupname* [texto]
-> ⸙ Cambiar la nombre del grupo.
-✦ *#gpdesc • #groupdesc* [texto]
-> ⸙ Cambiar la descripción del grupo.
-✦ *#del • #delete* + {citar un mensaje}
-> ⸙ Eliminar un mensaje.
-✦ *#linea • #listonline*
-> ⸙ Ver lista de usuarios en linea.
-✦ *#gp • #infogrupo*
-> ⸙ Ver la Informacion del grupo.
-✦ *#link*
-> ⸙ Ver enlace de invitación del grupo.
-╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅׅ
-
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *ANIME* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
+╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 🪷*ANIME*🪷 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
 > ✿ Comandos de reacciones de anime.
+
 ✦ *#angry • #enojado* + <mencion>
 > ⸙ Estar enojado
+
 ✦ *#bath • #bañarse* + <mencion>
 > ⸙ Bañarse
+
 ✦ *#bite • #morder* + <mencion>
 > ⸙ Muerde a alguien
+
 ✦ *#bleh • #lengua* + <mencion>
 > ⸙ Sacar la lengua
+
 ✦ *#blush • #sonrojarse* + <mencion>
 > ⸙ Sonrojarte
+
 ✦ *#bored • #aburrido* + <mencion>
 > ⸙ Estar aburrido
+
 ✦ *#clap • #aplaudir* + <mencion>
 > ⸙ Aplaudir
+
 ✦ *#coffee • #cafe • #café* + <mencion>
 > ⸙ Tomar café
+
 ✦ *#cry • #llorar* + <mencion>
 > ⸙ Llorar por algo o alguien
+
 ✦ *#cuddle • #acurrucarse* + <mencion>
 > ⸙ Acurrucarse
+
 ✦ *#dance • #bailar* + <mencion>
 > ⸙ Sacate los pasitos prohíbidos
+
 ✦ *#dramatic • #drama* + <mencion>
 > ⸙ Drama
+
 ✦ *#drunk • #borracho* + <mencion>
 > ⸙ Estar borracho
+
 ✦ *#eat • #comer* + <mencion>
 > ⸙ Comer algo delicioso
+
 ✦ *#facepalm • #palmada* + <mencion>
 > ⸙ Darte una palmada en la cara
+
 ✦ *#happy • #feliz* + <mencion>
 > ⸙ Salta de felicidad
+
 ✦ *#hug • #abrazar* + <mencion>
 > ⸙ Dar un abrazo
+
 ✦ *#impregnate • #preg • #preñar • #embarazar* + <mencion>
 > ⸙ Embarazar a alguien
+
 ✦ *#kill • #matar* + <mencion>
 > ⸙ Toma tu arma y mata a alguien
+
 ✦ *#kiss • #muak* + <mencion>
 > ⸙ Dar un beso
+
 ✦ *#kisscheek • #beso* + <mencion>
 > ⸙ Beso en la mejilla
+
 ✦ *#laugh • #reirse* + <mencion>
 > ⸙ Reírte de algo o alguien
+
 ✦ *#lick • #lamer* + <mencion>
 > ⸙ Lamer a alguien
+
 ✦ *#love • #amor • #enamorado • #enamorada* + <mencion>
 > ⸙ Sentirse enamorado
+
 ✦ *#pat • #palmadita • #palmada* + <mencion>
 > ⸙ Acaricia a alguien
+
 ✦ *#poke • #picar* + <mencion>
 > ⸙ Picar a alguien
+
 ✦ *#pout • #pucheros* + <mencion>
 > ⸙ Hacer pucheros
+
 ✦ *#punch • #pegar • #golpear* + <mencion>
 > ⸙ Dar un puñetazo
+
 ✦ *#run • #correr* + <mencion>
 > ⸙ Correr
+
 ✦ *#sad • #triste* + <mencion>
 > ⸙ Expresar tristeza
+
 ✦ *#scared • #asustado • #asustada* + <mencion>
 > ⸙ Estar asustado
+
 ✦ *#seduce • #seducir* + <mencion>
 > ⸙ Seducir a alguien
+
 ✦ *#shy • #timido • #timida* + <mencion>
 > ⸙ Sentir timidez
+
 ✦ *#slap • #bofetada* + <mencion>
 > ⸙ Dar una bofetada
+
 ✦ *#sleep • #dormir* + <mencion>
 > ⸙ Tumbarte a dormir
+
 ✦ *#smoke • #fumar* + <mencion>
 > ⸙ Fumar
+
 ✦ *#spit • #escupir* + <mencion>
 > ⸙ Escupir
+
 ✦ *#step • #pisar* + <mencion>
 > ⸙ Pisar a alguien
+
 ✦ *#think • #pensar* + <mencion>
 > ⸙ Pensar en algo
+
 ✦ *#walk • #caminar* + <mencion>
 > ⸙ Caminar
+
 ✦ *#wink • #guiñar* + <mencion>
 > ⸙ Guiñar el ojo
+
 ✦ *#cringe • #avergonzarse* + <mencion>
 > ⸙ Sentir vergüenza ajena
+
 ✦ *#smug • #presumir* + <mencion>
 > ⸙ Presumir con estilo
+
 ✦ *#smile • #sonreir* + <mencion>
 > ⸙ Sonreír con ternura
+
 ✦ *#highfive • #5* + <mencion>
 > ⸙ Chocar los cinco
+
 ✦ *#bully • #bullying* + <mencion>
 > ⸙ Molestar a alguien
+
 ✦ *#handhold • #mano* + <mencion>
 > ⸙ Tomarse de la mano
+
 ✦ *#wave • #ola • #hola* + <mencion>
 > ⸙ Saludar con la mano
-✦ *#waifu*
-> ⸙ Buscar una waifu aleatoria.
+
 ✦ *#ppcouple • #ppcp*
 > ⸙ Genera imágenes para amistades o parejas.
-╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯
-
-╭┈ࠢ͜─ׄ֟፝͜─ׄ͜─ׄ͜╴𐔌 *NSFW* 𐦯╶͜─ׄ͜─ׄ֟፝͜─ׄ͜─ׄ͜
-✦ *#danbooru • #dbooru* + [Tags]
-> ⸙ Buscar imagenes en Danbooru
-✦ *#gelbooru • #gbooru* + [Tags]
-> ⸙ Buscar imagenes en Gelbooru
-✦ *#rule34 • #r34* + [Tags]
-> ⸙ Buscar imagenes en Rule34
-✦ *#xvideos •#xvideosdl* + [Link]
-> ⸙ Descargar un video Xvideos. 
-✦ *#xnxx •#xnxxdl* + [Link]
-> ⸙ Descargar un video Xnxx.
-╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯ׅ`.trim()
+╰ׅ͜─֟͜─͜─ٞ͜─͜─๊͜─͜─๋͜─⃔═̶፝֟͜═̶⃔─๋͜─͜─͜─๊͜─ٞ͜─͜─֟͜┈ࠢ͜╯`.trim()
 await conn.sendMessage(m.chat, { 
 text: txt,
 contextInfo: {
