@@ -1,17 +1,32 @@
 import moment from 'moment-timezone'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `❀ Por favor, ingrese el número al que quiere enviar una invitación al grupo.`, m)
-if (text.includes('+')) return conn.reply(m.chat, `ꕥ Ingrese el número todo junto sin el *+*`, m)
-if (isNaN(text)) return conn.reply(m.chat, `ꕥ Ingrese sólo números sin su código de país y sin espacios.`, m)
+if (!text) return conn.reply(m.chat, `❀ El animatrónico no detecta ningún número... ingresa el número del objetivo para enviar la invitación.`, m)
+if (text.includes('+')) return conn.reply(m.chat, `ꕥ El número no debe contener el símbolo *+*. Los animatrónicos lo odian.`, m)
+if (isNaN(text)) return conn.reply(m.chat, `ꕥ Solo números, sin espacios ni códigos de país. Los sensores del animatrónico no reconocen otra cosa.`, m)
+
 let group = m.chat
 let link = 'https://chat.whatsapp.com/' + await conn.groupInviteCode(group)
-let tag = m.sender ? '@' + m.sender.split('@')[0] : 'Usuario'
+let tag = m.sender ? '@' + m.sender.split('@')[0] : 'Animatrónico'
 const chatLabel = m.isGroup ? (await conn.getName(m.chat) || 'Grupal') : 'Privado'
 const horario = `${moment.tz('America/Caracas').format('DD/MM/YYYY hh:mm:ss A')}`
-const invite = `❀ 𝗜𝗡𝗩𝗜𝗧𝗔𝗖𝗜𝗢𝗡 𝗔 𝗨𝗡 𝗚𝗥𝗨𝗣𝗢\n\nꕥ *Usuario* » ${tag}\n✿ *Chat* » ${chatLabel}\n✰ *Fecha* » ${horario}\n✦ *Link* » ${link}`
-await conn.reply(`${text}@s.whatsapp.net`, invite, m, { mentions: [m.sender] })
-m.reply(`❀ El enlace de invitación fue enviado al usuario correctamente.`)
+
+// Mensaje con estilo FNaF
+const invite = `
+🎵 𝗔𝗟𝗘𝗥𝗧𝗔 𝗗𝗘 𝗜𝗡𝗩𝗜𝗧𝗔𝗖𝗜𝗢𝗡 🎵
+
+⚠︎ Usuario que envía » ${tag}
+⚠︎ Ubicación del grupo » ${chatLabel}
+⚠︎ Fecha y hora » ${horario}
+
+👁️ ¡Ojo! Este enlace permite acceder al grupo:
+${link}
+
+❗ Recuerda: los animatrónicos vigilan cada movimiento...
+`
+
+await conn.reply(`${text}@s.whatsapp.net`, invite.trim(), m, { mentions: [m.sender] })
+m.reply(`❀ El enlace de invitación ha sido enviado. Mantente alerta... los animatrónicos siempre observan.`)
 }
 
 handler.help = ['invite']
