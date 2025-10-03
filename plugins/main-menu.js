@@ -28,7 +28,7 @@ Mantén la calma, los animatrónicos pueden estar escuchando...
 > ⸙ Gana fichas limpiando la pizzería o revisando cámaras.  
 
 ✦ *#slut • #prostituirse*  
-> ⸙ Opción cuestionable... incluso Foxy te juzgará por esto.  
+> ⸙ Opción cuestionable... este Bot no tiene comandos inapropiados.  
 
 ✦ *#coinflip • #flip • #cf* + [cantidad] <cara/cruz>  
 > ⸙ Apuesta fichas lanzando una ficha de arcade.  
